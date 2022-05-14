@@ -1,0 +1,173 @@
+/* variables */
+:root {
+    --green-price: #184b52;
+    --light-green-price: #38a8a8;
+    --lighter-green-price: #45bdbd;
+    --grey-green: #135d63;
+    --light-grey: #e2e0e033;
+}
+
+
+/* HTML tag changes */
+body {
+    background-color: lightblue;
+}
+
+i {
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+
+/* css classes */
+/* often used */
+.center-element-x {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Tip section user background */
+.white-tip-background {
+    background-color: white;
+    border-radius: 25px;
+    border: 2px solid white;
+}
+
+.width-tip-section {
+    width: 58%;
+}
+
+.padding-white-tip {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+
+/* logo */
+.margin-logo {
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.size-text-logo {
+    font-size: large;
+}
+
+
+/* boxes */
+.flex-wrap-items-around {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.flex-wrap-items-between {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.green-price-background {
+    background-color: var(--green-price);
+    border-radius: 15px;
+    border: 2px solid var(--green-price);
+}
+
+.green-price-sides {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 33px;
+    padding-bottom: 28px;
+}
+
+.box-width {
+    width: 38%;
+}
+
+.text-price {
+    color: var(--light-green-price);
+    font-size: 35px;
+}
+
+.text-comment {
+    color: var(--grey-green);
+    font-size: small;
+}
+
+.text-title {
+    color: white;
+    font-size: small;
+}
+
+.margin-top-item {
+    margin-top: 40px;
+}
+
+.margin-bottom-last-price {
+    margin-bottom: 120px;
+}
+
+.reset-button {
+    width: 100%;
+    color: var(--green-price);
+    font-size: large;
+    background-color: var(--light-green-price);
+    border-radius: 3px;
+    border: 2px solid var(--light-green-price);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.reset-button:hover {
+    background-color: var(--lighter-green-price);
+}
+
+
+
+.width-input {
+    width: 100%;
+}
+
+.number-input {
+    background-color: var(--light-grey);
+    text-align: end;
+    border-radius: 2px;
+    border: 2px var(--light-grey);
+    height: 25px;
+}
+
+.start-input {
+    text-align: start;
+}
+
+.margin-top-item-input {
+    margin-top: 60px;
+}
+
+.tip-button{
+    width: 30%;
+    background-color: var(--green-price);
+    color: white;
+    border-radius: 5px;
+    border: 1px solid var(--green-price);
+}
+
+.tip-button:hover {
+    background-color: var(--light-green-price);
+    border: 1px solid var(--light-green-price)
+}
+
+.tip-custom-input {
+    width: 28%;
+    border-radius: 5px;
+    border: 1px solid var(--light-grey);
+    background-color: var(--light-grey);
+}
+
+.tip-inside {
+    padding-top: 9px;
+    padding-bottom: 9px;
+    margin-top: 10px;
+}

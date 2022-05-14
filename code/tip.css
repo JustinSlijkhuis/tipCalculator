@@ -5,6 +5,8 @@
     --lighter-green-price: #45bdbd;
     --grey-green: #135d63;
     --light-grey: #e2e0e033;
+    --red: #ff0000;
+    --green: #22dd22;
 }
 
 
@@ -15,7 +17,7 @@ body {
 
 i {
     position: absolute;
-    margin-top: 5px;
+    margin-top: 7px;
     margin-left: 5px;
 }
 
@@ -125,7 +127,7 @@ i {
 }
 
 
-
+/* left side */
 .width-input {
     width: 100%;
 }
@@ -134,16 +136,20 @@ i {
     background-color: var(--light-grey);
     text-align: end;
     border-radius: 2px;
-    border: 2px var(--light-grey);
+    border: 2px solid var(--light-grey);
     height: 25px;
 }
 
-.start-input {
-    text-align: start;
+.warning {
+    border: 2px solid var(--red);
+}
+
+.succes {
+    border: 2px solid var(--green);
 }
 
 .margin-top-item-input {
-    margin-top: 60px;
+    margin-top: 55px;
 }
 
 .tip-button{
@@ -156,7 +162,7 @@ i {
 
 .tip-button:hover {
     background-color: var(--light-green-price);
-    border: 1px solid var(--light-green-price)
+    border: 1px solid var(--light-green-price);
 }
 
 .tip-custom-input {
@@ -170,4 +176,17 @@ i {
     padding-top: 9px;
     padding-bottom: 9px;
     margin-top: 10px;
+}
+
+.number-input-custom {
+    text-align: center;
+}
+
+input:focus {
+    outline: none;
+}
+
+.button-selected {
+    background-color: var(--lighter-green-price);
+    border: 1px solid var(--lighter-green-price);
 }

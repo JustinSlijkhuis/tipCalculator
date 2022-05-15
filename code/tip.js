@@ -21,7 +21,7 @@ reset.addEventListener('click', _ => {
     removeBackgroundButton()
     resetValues()
     resetVariabeles()
-    setCosts()
+    setValues()
 })
 
 

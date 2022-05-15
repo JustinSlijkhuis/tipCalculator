@@ -235,6 +235,16 @@ i {
     width: 100%;
 }
 
+.input-description-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.warning-text {
+    font-size: small;
+    color: red;
+}
+
 .number-input {
     background-color: var(--light-grey);
     text-align: end;

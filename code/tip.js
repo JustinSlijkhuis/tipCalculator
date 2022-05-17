@@ -16,7 +16,7 @@ const warningPeople = document.getElementById('warning-people')
 /* warnings */
 const warn = (type, warning) => {
     let input = eval("warning" + type)
-    input.innerHTML = warning
+    input.textContent = warning
 }
 
 
@@ -123,8 +123,8 @@ for(let index = 0; index < tipButtons.children.length; index++) {
 
 
 /* security checks */
-const inputLengthBill = 5
-const inputLengthPeople = 2
+const inputLengthBill = 99999
+const inputLengthPeople = 99
 const securityCheckCustom = tipButton => {
     if(isNaN(tipButton.value) || tipButton.value === "" || percentage < 0 || percentage > 100) {
         if(percentage > 100) {
@@ -151,7 +151,8 @@ const securityCheckCustom = tipButton => {
 
 
 const securityCheckBill = _ => {
-    if(isNaN(value) || value === "" || value < 1 || value.toString().length > inputLengthBill) {
+    const splitArrayBill = Number(bill).toString().split('.')
+    if(isNaN(value) || value === "" || value < 1 || value > inputLengthBill) {
         bill.classList.remove('succes')
         bill.classList.add('warning')
 
@@ -160,8 +161,8 @@ const securityCheckBill = _ => {
             return
         }
 
-        if(value.toString().length > inputLengthBill) {
-            warn("Bill", `Max ${inputLengthBill} numbers!`)
+        if(value > inputLengthBill) {
+            warn("Bill", `Max ${inputLengthBill}!`)
             bill.value = bill.value.slice(0, -1)
             value = bill.value
             return
@@ -186,7 +187,7 @@ const securityCheckBill = _ => {
 
 
 const securityCheckPeople = _ => {
-    if(isNaN(numberOfPeople) || numberOfPeople === "" || numberOfPeople < 1 || numberOfPeople.toString().length > inputLengthPeople) {
+    if(isNaN(numberOfPeople) || numberOfPeople === "" || numberOfPeople < 1 || numberOfPeople > inputLengthPeople) {
         people.classList.remove('succes')
         people.classList.add('warning')
 
@@ -195,8 +196,8 @@ const securityCheckPeople = _ => {
             return
         }
 
-        if(numberOfPeople.toString().length > inputLengthPeople) {
-            warn("People", `Max ${inputLengthPeople} numbers!`)
+        if(numberOfPeople > inputLengthPeople) {
+            warn("People", `Max ${inputLengthPeople}!`)
             people.value = numberOfPeople.slice(0, -1)
             return
         }
@@ -222,7 +223,7 @@ const securityCheckPeople = _ => {
 
 /* get percentage */
 const getPercentageButton = tipButton => {
-    let percentageString = tipButton.innerHTML
+    let percentageString = tipButton.textContent
     return percentageString.slice(0, -1)
 }
 
@@ -268,13 +269,16 @@ const calculateBill = _ => {
 
 /* set values */
 const setValuesZero = _ => {
-    total.innerHTML = '$0.00'
-    tip.innerHTML = '$0.00'
+    total.textContent = '$0.00'
+    tip.textContent = '$0.00'
 }
 
 const setValues = _ => {
+    if(isNaN(value) || isNaN(numberOfPeople) || isNaN(percentage)) {
+        return
+    }
     calculateTip()
     calculateBill()
-    tip.innerHTML = `$${valueTip}`
-    total.innerHTML = `$${billValue}`
+    tip.textContent = `$${valueTip}`
+    total.textContent = `$${billValue}`
 }
